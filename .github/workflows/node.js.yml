@@ -20,8 +20,8 @@ jobs:
          npm install
          npm run build
     
-    test:
-      runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -29,7 +29,7 @@ jobs:
         os: [ubuntu-latest, windows-2016]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-     steps:
+    steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
